@@ -4,8 +4,11 @@ from aiogram.types import ReplyKeyboardRemove, \
 
 reg_button = KeyboardButton('🙋 Регистрация')
 check_button = KeyboardButton('🕵️ Поиск соседа')
+cancel_button = KeyboardButton('Отмена')
+
 main_kb = ReplyKeyboardMarkup(resize_keyboard=True)
 main_kb.row(reg_button, check_button)
+main_kb.row(cancel_button)
 
 inline_btn_build1 = InlineKeyboardButton('Корпус 1', callback_data='btn_build1')
 inline_btn_build2 = InlineKeyboardButton('Корпус 2', callback_data='btn_build2')

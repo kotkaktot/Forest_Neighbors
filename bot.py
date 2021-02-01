@@ -40,7 +40,7 @@ def db_write_user(data):
 async def first_test_state_case_met(message: types.Message):
     state = dp.current_state(user=message.from_user.id)
 
-    if message.text == '*':
+    if message.text == 'Отмена':
         await state.reset_state()
         await bot.send_message(message.from_user.id, 'Ваша регистрация отмена.')
         return
@@ -62,7 +62,7 @@ async def first_test_state_case_met(message: types.Message):
                                'room': room})
 
                 await bot.send_message(message.from_user.id, 'Спасибо! Мы зарегистрировали Вашего пользователя telegram'
-                                                             ' как соседа из квартиры {}.'.format(room))
+                                                             ' как жильца из квартиры {}.'.format(room))
                 await state.reset_state()
                 return
         except:
@@ -75,7 +75,7 @@ async def first_test_state_case_met(message: types.Message):
 async def first_test_state_case_met(message: types.Message):
     state = dp.current_state(user=message.from_user.id)
 
-    if message.text == '*':
+    if message.text == 'Отмена':
         await state.reset_state()
         await bot.send_message(message.from_user.id, 'Ваша регистрация отмена.')
         return
@@ -97,7 +97,7 @@ async def first_test_state_case_met(message: types.Message):
                                'room': room})
 
                 await bot.send_message(message.from_user.id, 'Спасибо! Мы зарегистрировали Вашего пользователя telegram'
-                                                             ' как соседа из квартиры {}.'.format(room))
+                                                             ' как жильца из квартиры {}.'.format(room))
                 await state.reset_state()
                 return
         except:
@@ -110,7 +110,7 @@ async def first_test_state_case_met(message: types.Message):
 async def first_test_state_case_met(message: types.Message):
     state = dp.current_state(user=message.from_user.id)
 
-    if message.text == '*':
+    if message.text == 'Отмена':
         await state.reset_state()
         await bot.send_message(message.from_user.id, 'Ваша регистрация отмена.')
         return
@@ -132,7 +132,7 @@ async def first_test_state_case_met(message: types.Message):
                                'room': room})
 
                 await bot.send_message(message.from_user.id, 'Спасибо! Мы зарегистрировали Вашего пользователя telegram'
-                                                             ' как соседа из квартиры {}.'.format(room))
+                                                             ' как жильца из квартиры {}.'.format(room))
                 await state.reset_state()
                 return
         except:
@@ -145,7 +145,7 @@ async def first_test_state_case_met(message: types.Message):
 async def first_test_state_case_met(message: types.Message):
     state = dp.current_state(user=message.from_user.id)
 
-    if message.text == '*':
+    if message.text == 'Отмена':
         await state.reset_state()
         await bot.send_message(message.from_user.id, 'Ваш поиск отменён.')
         return
@@ -162,8 +162,8 @@ async def first_test_state_case_met(message: types.Message):
                 await state.reset_state()
                 return
             else:
-                await bot.send_message(message.from_user.id, 'Соседи из квартиры {} в базе не найдены. '
-                                                             'Для отмены поиска введите «*» или введите другой'
+                await bot.send_message(message.from_user.id, 'Соседи из квартиры {} в базе не найдены.\n'
+                                                             'Используйте кнопку «Отмена» или введите другой'
                                                              ' номер квартиры:'.format(room))
         except:
             await bot.send_message(message.from_user.id, 'Номер квартиры задан не верно, '
@@ -175,7 +175,7 @@ async def first_test_state_case_met(message: types.Message):
 async def first_test_state_case_met(message: types.Message):
     state = dp.current_state(user=message.from_user.id)
 
-    if message.text == '*':
+    if message.text == 'Отмена':
         await state.reset_state()
         await bot.send_message(message.from_user.id, 'Ваш поиск отменён.')
         return
@@ -192,8 +192,8 @@ async def first_test_state_case_met(message: types.Message):
                 await state.reset_state()
                 return
             else:
-                await bot.send_message(message.from_user.id, 'Соседи из квартиры {} в базе не найдены. '
-                                                             'Для отмены поиска введите «*» или введите другой'
+                await bot.send_message(message.from_user.id, 'Соседи из квартиры {} в базе не найдены.\n'
+                                                             'Используйте кнопку «Отмена» или введите другой'
                                                              ' номер квартиры:'.format(room))
         except:
             await bot.send_message(message.from_user.id, 'Номер квартиры задан не верно, '
@@ -205,7 +205,7 @@ async def first_test_state_case_met(message: types.Message):
 async def first_test_state_case_met(message: types.Message):
     state = dp.current_state(user=message.from_user.id)
 
-    if message.text == '*':
+    if message.text == 'Отмена':
         await state.reset_state()
         await bot.send_message(message.from_user.id, 'Ваш поиск отменён.')
         return
@@ -222,8 +222,8 @@ async def first_test_state_case_met(message: types.Message):
                 await state.reset_state()
                 return
             else:
-                await bot.send_message(message.from_user.id, 'Соседи из квартиры {} в базе не найдены. '
-                                                             'Для отмены поиска введите «*» или введите другой'
+                await bot.send_message(message.from_user.id, 'Соседи из квартиры {} в базе не найдены.\n'
+                                                             'Используйте кнопку «Отмена» или введите другой'
                                                              ' номер квартиры:'.format(room))
         except:
             await bot.send_message(message.from_user.id, 'Номер квартиры задан не верно, '
@@ -242,38 +242,38 @@ async def process_callback_btn_profile(callback_query: types.CallbackQuery):
     if button_name == 'build1':
         await bot.send_message(callback_query.from_user.id, 'Вы выбрали *КОРПУС 1*', parse_mode=ParseMode.MARKDOWN)
 
-        await bot.send_message(callback_query.from_user.id, 'Введите номер квартиры для окончания регистрации или'
-                                                            ' символ «*» для отмены:')
+        await bot.send_message(callback_query.from_user.id, 'Для окончания регистрации введите номер квартиры или '
+                                                            'воспользуйтесь кнопкой «Отмена»:')
         await state.set_state(States.STATE_REG_B1)
     elif button_name == 'build2':
         await bot.send_message(callback_query.from_user.id, 'Вы выбрали *КОРПУС 2*', parse_mode=ParseMode.MARKDOWN)
 
-        await bot.send_message(callback_query.from_user.id, 'Введите номер квартиры для окончания регистрации или'
-                                                            ' символ «*» для отмены:')
+        await bot.send_message(callback_query.from_user.id, 'Для окончания регистрации введите номер квартиры или '
+                                                            'воспользуйтесь кнопкой «Отмена»:')
         await state.set_state(States.STATE_REG_B2)
     elif button_name == 'build3':
         await bot.send_message(callback_query.from_user.id, 'Вы выбрали *КОРПУС 3*', parse_mode=ParseMode.MARKDOWN)
 
-        await bot.send_message(callback_query.from_user.id, 'Введите номер квартиры для окончания регистрации или'
-                                                            ' символ «*» для отмены:')
+        await bot.send_message(callback_query.from_user.id, 'Для окончания регистрации введите номер квартиры или '
+                                                            'воспользуйтесь кнопкой «Отмена»:')
         await state.set_state(States.STATE_REG_B3)
     elif button_name == 'build1_search':
         await bot.send_message(callback_query.from_user.id, 'Вы выбрали *КОРПУС 1*', parse_mode=ParseMode.MARKDOWN)
 
         await bot.send_message(callback_query.from_user.id, 'Введите искомый номер квартиры или'
-                                                            ' символ «*» для отмены:')
+                                                            'или воспользуйтесь кнопкой «Отмена»:')
         await state.set_state(States.STATE_SRCH_B1)
     elif button_name == 'build2_search':
         await bot.send_message(callback_query.from_user.id, 'Вы выбрали *КОРПУС 2*', parse_mode=ParseMode.MARKDOWN)
 
         await bot.send_message(callback_query.from_user.id, 'Введите искомый номер квартиры или'
-                                                            ' символ «*» для отмены:')
+                                                            'или воспользуйтесь кнопкой «Отмена»:')
         await state.set_state(States.STATE_SRCH_B2)
     elif button_name == 'build3_search':
         await bot.send_message(callback_query.from_user.id, 'Вы выбрали *КОРПУС 3*', parse_mode=ParseMode.MARKDOWN)
 
         await bot.send_message(callback_query.from_user.id, 'Введите искомый номер квартиры или'
-                                                            ' символ «*» для отмены:')
+                                                            'или воспользуйтесь кнопкой «Отмена»:')
         await state.set_state(States.STATE_SRCH_B3)
 
     await callback_query.message.edit_reply_markup(reply_markup=None)
