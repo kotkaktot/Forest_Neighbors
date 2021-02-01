@@ -260,19 +260,19 @@ async def process_callback_btn_profile(callback_query: types.CallbackQuery):
     elif button_name == 'build1_search':
         await bot.send_message(callback_query.from_user.id, 'Вы выбрали *КОРПУС 1*', parse_mode=ParseMode.MARKDOWN)
 
-        await bot.send_message(callback_query.from_user.id, 'Введите искомый номер квартиры или'
+        await bot.send_message(callback_query.from_user.id, 'Введите искомый номер квартиры '
                                                             'или воспользуйтесь кнопкой «Отмена»:')
         await state.set_state(States.STATE_SRCH_B1)
     elif button_name == 'build2_search':
         await bot.send_message(callback_query.from_user.id, 'Вы выбрали *КОРПУС 2*', parse_mode=ParseMode.MARKDOWN)
 
-        await bot.send_message(callback_query.from_user.id, 'Введите искомый номер квартиры или'
+        await bot.send_message(callback_query.from_user.id, 'Введите искомый номер квартиры '
                                                             'или воспользуйтесь кнопкой «Отмена»:')
         await state.set_state(States.STATE_SRCH_B2)
     elif button_name == 'build3_search':
         await bot.send_message(callback_query.from_user.id, 'Вы выбрали *КОРПУС 3*', parse_mode=ParseMode.MARKDOWN)
 
-        await bot.send_message(callback_query.from_user.id, 'Введите искомый номер квартиры или'
+        await bot.send_message(callback_query.from_user.id, 'Введите искомый номер квартиры '
                                                             'или воспользуйтесь кнопкой «Отмена»:')
         await state.set_state(States.STATE_SRCH_B3)
 
